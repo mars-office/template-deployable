@@ -12,6 +12,6 @@ on:
       - main
 
 jobs:
-  helm_build_push:
+  docker_build_push:
     uses: mars-office/.github/.github/workflows/docker.yaml@main
     secrets: inherit
