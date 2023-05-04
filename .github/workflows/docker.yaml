@@ -7,7 +7,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'chart/**'
+      - 'chart/templates/**'
+      - 'chart/.helmignore'
+      - 'chart/values.yaml'
 
   pull_request:
     branches:
