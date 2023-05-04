@@ -1,6 +1,6 @@
-name: 'Docker/Helm Build and Push'
+name: 'Docker/Helm build and push'
 
-run-name: 'Docker/Helm Build and Push - 0.0.${{ github.run_number }}'
+run-name: '${{ github.repository.name }} - 0.0.${{ github.run_number }} - Docker/Helm build and push'
 
 on:
   workflow_dispatch:
