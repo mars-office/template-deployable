@@ -15,7 +15,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'chart/**'
+      - 'chart/templates/**'
+      - 'chart/.helmignore'
+      - 'chart/values.yaml'
 
 jobs:
   docker_build_push:
