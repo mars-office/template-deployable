@@ -1,6 +1,6 @@
 name: 'Docker/Helm build and push'
 
-run-name: 'template-deployable - 0.0.${{ github.run_number }} - Docker/Helm build and push'
+run-name: '0.0.${{ github.run_number }} - ${{ github.workflow }}'
 
 on:
   workflow_dispatch:
