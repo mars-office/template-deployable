@@ -32,4 +32,4 @@ jobs:
     with:
       version: '0.0.${{ github.run_number }}'
       umbrellaChartName: 'huna'
-      chartName: ${{ needs.helm_build_push.outputs.chartName }}
+      workingDirectory: 'chart'
