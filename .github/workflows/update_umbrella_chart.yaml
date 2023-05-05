@@ -15,6 +15,6 @@ jobs:
     uses: mars-office/.github/.github/workflows/update_umbrella_chart.yaml@main
     secrets: inherit
     with:
-      version: '0.0.${{ github.run_number }}'
+      version: '0.0.${{ github.event.workflow_run.run_number}}'
       workingDirectory: 'chart'
       umbrellaChartName: 'my-app'
