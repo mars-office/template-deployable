@@ -25,11 +25,3 @@ jobs:
     with:
       version: '0.0.${{ github.run_number }}'
       workingDirectory: 'chart'
-  update_umbrella_chart:
-    uses: mars-office/.github/.github/workflows/update_umbrella_chart.yaml@main
-    secrets: inherit
-    needs: [helm_build_push]
-    with:
-      version: '0.0.${{ github.run_number }}'
-      umbrellaChartName: 'huna'
-      workingDirectory: 'chart'
