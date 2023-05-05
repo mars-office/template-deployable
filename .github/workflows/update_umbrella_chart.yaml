@@ -1,6 +1,6 @@
 name: 'Update umbrella chart'
 
-run-name: '${{ github.event.workflow_run.run_number}} - ${{ github.workflow }}'
+run-name: '0.0.${{ github.event.workflow_run.run_number}} - ${{ github.workflow }}'
 
 on:
   workflow_run:
