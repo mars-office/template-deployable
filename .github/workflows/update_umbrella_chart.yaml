@@ -1,20 +1,20 @@
-name: 'Update umbrella chart'
+# name: 'Update umbrella chart'
 
-run-name: '0.0.${{ github.event.workflow_run.run_number}} - ${{ github.workflow }}'
+# run-name: '0.0.${{ github.event.workflow_run.run_number}} - ${{ github.workflow }}'
 
-on:
-  workflow_run:
-    workflows: [Docker/Helm build and push]
-    types:
-      - completed
-    branches:
-      - main
+# on:
+#   workflow_run:
+#     workflows: [Docker/Helm build and push]
+#     types:
+#       - completed
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    uses: mars-office/.github/.github/workflows/update_umbrella_chart.yaml@main
-    secrets: inherit
-    with:
-      version: '0.0.${{ github.run_number }}'
-      workingDirectory: 'chart'
-      umbrellaChartName: 'huna'
+# jobs:
+#   deploy:
+#     uses: mars-office/.github/.github/workflows/update_umbrella_chart.yaml@main
+#     secrets: inherit
+#     with:
+#       version: '0.0.${{ github.run_number }}'
+#       workingDirectory: 'chart'
+#       umbrellaChartName: 'my-app'
