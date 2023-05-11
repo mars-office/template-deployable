@@ -21,6 +21,7 @@ serviceAccount:
 
 podAnnotations:
   linkerd.io/inject: enabled
+  config.linkerd.io/skip-outbound-ports: "8081,8022,6001"
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -46,14 +47,14 @@ ingress:
     nginx.ingress.kubernetes.io/service-upstream: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: template-deployable.marsconceptor.local
+    - host: template-deployable.local.marsconceptor.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: template-deployable-ingress-tls
       hosts:
-        - template-deployable.marsconceptor.local
+        - template-deployable.local.marsconceptor.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
