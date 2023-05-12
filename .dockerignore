@@ -17,6 +17,10 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 .env
+intercept.sh
+stop.sh
+chart/
+.vscode/
 ### Linux ###
 *~
 

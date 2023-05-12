@@ -1,2 +1,2 @@
 #!/bin/sh
-telepresence leave namespace-namespace-template-deployable
+telepresence leave namespace-release-template-deployable
