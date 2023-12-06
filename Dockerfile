@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 ARG DEPLOYABLE_VERSION
+RUN echo "export const VERSION = '${DEPLOYABLE_VERSION}'" > ./src/version.ts
 ARG TARGETPLATFORM
 
 ENTRYPOINT ["/bin/ash", "-c", "sleep infinity"]
